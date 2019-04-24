@@ -3,7 +3,7 @@ var router = express.Router();
 var Admin=require('../model/Admin')
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Express framework' });
 });
 
  router.get('/signup',function(req,res){
