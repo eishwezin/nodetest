@@ -1,5 +1,5 @@
-var mongoose=require ('mongoose');
-var bcrypt=require('bcrypt-nodejs');
+var mongoose = require ('mongoose');
+var bcrypt = require('bcrypt-nodejs');
 var Schema=mongoose.Schema;
 
 var AdminSchema= new Schema({
