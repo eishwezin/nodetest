@@ -15,15 +15,18 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-mongoose.connect('mongodb+srv://thandar:th7898th@thandar-m16jp.mongodb.net/test?retryWrites=true');
-var db = mongoose.connection;
-db.on('error',console.error.bind(console,'MongoDB connection'));
+
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+mongoose.connect('mongodb+srv://thandar:th7898th@thandar-m16jp.mongodb.net/test?retryWrites=true');
+var db = mongoose.connection;
+db.on('error',console.error.bind(console,'MongoDB connection'));
+
 app.use(session({
   secret:'@efdgfghgf^7***',
   resave:false,
