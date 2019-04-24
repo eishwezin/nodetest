@@ -1,7 +1,7 @@
 var mongoose=require ('mongoose');
-var Schema=mongoose.Schema;
-var dateformat=require('dateformat');
 var bcrypt=require('bcrypt-nodejs');
+var Schema=mongoose.Schema;
+
 var AdminSchema= new Schema({
   name:{
     type:String,
