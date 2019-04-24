@@ -26,4 +26,4 @@ AdminSchema.pre('save',function(next){
 AdminSchema.statics.compare=function(cleartext,encrypted){
   return bcrypt.compareSync(cleartext,encrypted);
 }
-module.exports=mongoose.model('Admin',AdminSchema)
+module.exports = mongoose.model('Admin',AdminSchema)
